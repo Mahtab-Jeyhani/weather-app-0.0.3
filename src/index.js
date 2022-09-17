@@ -8,6 +8,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <SearchEngine />
+    <p><a href="https://github.com/Mahtab-Jeyhani/weather-app-0.0.3">open-source</a> project by Mahtab Jeyhani</p>
+
   </React.StrictMode>
 );
 
