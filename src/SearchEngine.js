@@ -3,7 +3,7 @@ import axios from "axios";
 import './App.css';
 
 export default function SearchEngine() {
-  let [name, setName] = useState("");
+
   let [city, setcity] = useState("");
   let [load, setLoad] = useState(false);
 
@@ -11,10 +11,7 @@ export default function SearchEngine() {
     event.preventDefault();
     setcity(event.target.value);
   }
-  function showname(event) {
-    event.preventDefault();
-    setName(event.target.value);
-  }
+
 
   const [temperature, setTemperature] = useState(null);
   const [description, setDescription] = useState(null);
