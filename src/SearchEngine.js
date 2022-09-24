@@ -67,10 +67,14 @@ export default function SearchEngine() {
       <div className="container">
         {form}
         <ul>
-          <li>Temperature: {Math.round(temperature)}°C</li>
-          <li>Description: {description}</li>
-          <li>Humidity: {humidity}%</li>
-          <li>Wind: {Math.round(wind)}km/h</li>
+          <div className="row">
+          <li className="col-6">Temperature: {Math.round(temperature)}°C</li>
+          <li className="col-6">Description: {description}</li>
+          </div>
+          <div className="row">
+          <li className="col-6">Humidity: {humidity}%</li>
+          <li className="col-6">Wind: {Math.round(wind)}km/h</li>
+          </div>
           <li>
             <img src={icon} alt="" />
           </li>
