@@ -3,11 +3,17 @@ import axios from "axios";
 import './App.css';
 
 export default function SearchEngine() {
+  let [name, setName] = useState("");
   let [city, setcity] = useState("");
   let [load, setLoad] = useState(false);
+
   function show(event) {
     event.preventDefault();
     setcity(event.target.value);
+  }
+  function showname(event) {
+    event.preventDefault();
+    setName(event.target.value);
   }
 
   const [temperature, setTemperature] = useState(null);
@@ -50,14 +56,15 @@ export default function SearchEngine() {
   }
 
   let form = (
-    <form onSubmit={handleSubmit}>
+    <div className="FORM"><form onSubmit={handleSubmit}>
       <input type="search" placeholder="Type a city... " onChange={show} />
       <input type="submit" value="Search" />
-    </form>
+    </form></div>
   );
+
   if (load) {
     return (
-      <div>
+      <div className="container">
         {form}
         <ul>
           <li>Temperature: {Math.round(temperature)}°C</li>
@@ -71,7 +78,7 @@ export default function SearchEngine() {
       </div>
     );
   } else {
-    return form;
+    return <div className="container">{form}</div>;
   }
   
 }
